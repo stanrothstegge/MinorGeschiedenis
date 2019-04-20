@@ -1,4 +1,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
     android:shape="rectangle">
 
     <corners
@@ -8,12 +9,12 @@
 
     <!--If your shape requires only one solid color-->
     <solid
-        android:color="#A87C9B">
+        android:color="@color/altBackground">
     </solid>
 
     <size
-        android:width="124dp"
-        android:height="50dp" />
+        android:width="120dp"
+        android:height="42dp" />
 
     <!--Use android:dashWidth="2dp" and android:dashGap="2dp"
     to add dashes to your stroke-->

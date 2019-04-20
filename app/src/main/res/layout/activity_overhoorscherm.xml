@@ -4,20 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#90B8C9"
+    android:backgroundTint="#90B8C9"
     tools:context=".Overhoorscherm">
 
-    <TextView
-        android:id="@+id/questionTextview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
+    <RelativeLayout
+        android:id="@+id/questionlayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:text="Question"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="35dp" />
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <TextView
+            android:id="@+id/questionTextview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Question"
+            android:textSize="17sp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="35dp" />
+    </RelativeLayout>
 
 
     <com.google.android.flexbox.FlexboxLayout
@@ -26,28 +43,29 @@
         android:layout_height="161dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="334dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="300dp"
+        app:alignItems="flex_start"
         app:dividerDrawable="@drawable/divider"
         app:flexDirection="row_reverse"
         app:flexWrap="wrap"
-        app:alignItems="flex_start"
-        app:justifyContent="flex_start"
-        app:showDivider="middle">
+        app:maxLine="3"
+        app:justifyContent="flex_start">
 
     </com.google.android.flexbox.FlexboxLayout>
 
     <com.google.android.flexbox.FlexboxLayout
         android:id="@+id/flexbox"
-        android:layout_width="330dp"
-        android:layout_height="161dp"
+        android:layout_width="335dp"
+        android:layout_height="106dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="145dp"
-        app:flexDirection="row_reverse"
-        app:flexWrap="wrap"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="153dp"
         app:alignItems="flex_start"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:maxLine="2"
         app:justifyContent="center">
 
     </com.google.android.flexbox.FlexboxLayout>
@@ -62,20 +80,40 @@
         android:layout_marginStart="17dp"
         android:layout_marginBottom="7dp"
         android:layout_weight="1"
-        android:backgroundTint="@color/colorAnswer2"
+        android:textColor="#FFFFFF"
+
         android:text="Menu" />
 
     <Button
-        android:id="@+id/proceed_button"
-        android:layout_width="100dp"
-        android:layout_height="34dp"
+        android:id="@+id/proceedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
-        android:backgroundTint="@color/colorAnswer2"
+        android:textColor="#FFFFFF"
         android:text="Verder" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/flexbox"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="120dp"
+        android:text="Antwoord" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/flexbox"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="273dp"
+        android:text="Opties" />
 
 
 </RelativeLayout>
